@@ -1,0 +1,38 @@
+﻿@model NewsSystem.Data.Models.Article
+
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h1>@Model.Title<small>Category: @Model.Category.Name</small></h1>
+    <p>@Model.Content</p>
+    <p>Author: @Model.Author.UserName</p>
+    <p class="pull-right">@Model.DateCreated</p>
+</div>
+<p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Back to List", "News")
+
+        @*if (User.IsInRole("Administrators"))
+            {
+                @: | @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+                @: | @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+            }
+            else*@
+    if (User.Identity.Name == Model.AuthorId)
+    {
+        @: | @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        }
+    }
+    else
+    {
+        @Html.ActionLink("Back To Home Page", "News", "Home")
+    }
+
+
+
+
+</p>

@@ -1,0 +1,64 @@
+﻿@model IQueryable<Category>
+
+<table class="table table-striped table-responsive table-condensed">
+    <thead>
+        <tr>
+            <td>Category</td>
+            <td>Articles Count</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@Html.ActionLink(item.Name, "Details", "Category", new { id = item.Id }, null)</td>
+                <td>@item.Articles.Count</td>
+                <td><button class="btn btn-info">Edit</button> <button class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    }
+</table>
+@*@(Html.Kendo().Grid<NewsSystem.Data.Models.Category>()
+                .Name("Categories")
+                .Columns(columns =>
+                {
+                    columns.Bound(c => c.Name);
+                    //columns.Bound(c => c.ContactName).ClientTemplate(
+                    //        @"<div class='customer-photo'
+                    //            style='background-image: url(../content/web/Customers/#:data.CustomerID#.jpg);'></div>
+                    //        <div class='customer-name'>#: ContactName #</div>")
+                    //  .Width(240);
+                    //columns.Bound(c => c.Country).Width(150);
+                })
+                //.HtmlAttributes(new { style = "height: 550px;" })
+                .ColumnMenu()
+                .ToolBar(tools => tools.Create())
+                .Pageable(p => p.Refresh(true))
+                .Sortable()
+                .Filterable()
+                .Groupable()
+                .Editable(e => e.Mode(GridEditMode.PopUp))
+                .Scrollable()
+               .DataSource(dataSource =>
+               {
+                   dataSource
+                   .Ajax()
+                   .PageSize(5)
+                   .Model(m => m.Id(c => c.Id))
+                   .Read(read => read.Action("ReadCategories", "Private"))
+                   .Create(create => create.Action("CreateCategory", "Private"));
+               })
+    )*@
+@*<asp:GridView runat="server" ID="gvCategories" ItemType="NewsSystem.Data.Models.Category" DataKeyNames="Id" SelectMethod="gvCategories_GetData" AutoGenerateColumns="false" AllowPaging="true" PageSize="5" AllowSorting="true" UpdateMethod="gvCategories_UpdateItem" DeleteMethod="gvCategories_DeleteItem">
+        <Columns>
+            <asp:BoundField DataField="Name" HeaderText="SortByName" SortExpression="Name" />
+            <asp:CommandField ShowEditButton="true" ControlStyle-CssClass="btn btn-info" />
+            <asp:CommandField ShowDeleteButton="true" ControlStyle-CssClass="btn btn-danger" />
+        </Columns>
+    </asp:GridView>
+    <asp:RequiredFieldValidator ForeColor="Red" ErrorMessage="Category name is mandatory!" ControlToValidate="tbInsert" runat="server" />
+    <br />
+    <asp:TextBox runat="server" ID="tbInsert" />
+    <asp:Button Text="Insert" runat="server" ID="Button1" OnClick="btnInsert_Click" CssClass="btn btn-info" />
+    <asp:Button Text="Cancel" runat="server" ID="btnInsert" OnClick="btnInsert_Click1" CssClass="btn btn-danger" />*@

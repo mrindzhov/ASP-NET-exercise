@@ -1,0 +1,13 @@
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\NewsSystem.Data.Models.dll.config
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\NewsSystem.Data.Models.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\NewsSystem.Data.Models.pdb
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\EntityFramework.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\EntityFramework.xml
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\obj\Debug\NewsSystem.Data.Models.dll
+C:\Users\mindzhov\Documents\Visual Studio 2015\Projects\Solution1\NewsSystem.Data.Models\obj\Debug\NewsSystem.Data.Models.pdb

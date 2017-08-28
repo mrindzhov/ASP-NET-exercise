@@ -1,0 +1,48 @@
+﻿@model NewsSystem.Web.MVC.ViewModels.ArticlesAndCategoriesViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<h1>News</h1>
+<h2>Most Popular Articles</h2>
+@foreach (var Article in Model.Articles)
+{
+    <h3>
+        <strong>
+            @Html.ActionLink(Article.Title, "Article", "Home", new { id = Article.Id }, null)
+        </strong>
+        <small> @Article.Category.Name</small>
+    </h3>
+    <p>
+        @Article.Content
+    </p>
+    <p>
+        Likes: @Article.Likes.Count()
+    </p>
+    <i>
+        by @Article.Author.UserName created on: @Article.DateCreated
+    </i>
+}
+<h2>All categories</h2>
+@foreach (var category in Model.Categories)
+{
+    <div class="col-md-6">
+        <h3>@category.Name</h3>
+        @if (category.Articles.Count > 0)
+        {
+            <ul id="itemPlaceholder">
+                @foreach (var article in category.Articles)
+                    {
+                    <li>
+                        @Html.ActionLink(@article.Title, "Article", "Home", new { id = article.Id }, null)
+                        <i>by @article.Author.UserName</i>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No articles.</p>
+        }
+    </div>
+}
